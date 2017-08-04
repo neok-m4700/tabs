@@ -415,7 +415,8 @@ class TabBarView
         @pane.activate() unless @pane.isDestroyed()
     else if event.which is 2
       @pane.destroyItem(tab.item)
-      event.preventDefault()
+      # event.preventDefault()
+      false
 
   onDoubleClick: (event) ->
     if tab = @tabForElement(event.target)
